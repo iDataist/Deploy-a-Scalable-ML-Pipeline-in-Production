@@ -1,6 +1,7 @@
 # Deploying a Scalable ML Pipeline in Production
 
-Working in a command line environment is recommended for ease of use with git and dvc. If on Windows, WSL1 or 2 is recommended.
+## Overview
+I developed a CI/CD pipeline to predict salary range based on publicly available Census Bureau data. I created unit tests to monitor the model performance on various slices of the data. Then, I deployed the model using the FastAPI package and create API tests. Both the slice-validation and the API tests were incorporated into the CI/CD framework using GitHub Actions.
 
 # Environment Set up
 * Download and install conda if you don’t have it already.
