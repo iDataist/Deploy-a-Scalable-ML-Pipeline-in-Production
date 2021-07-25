@@ -55,3 +55,252 @@ Name: 0, Length: 101, dtype: float64
 2021-07-25 14:56:15,700 best parameters are: {'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_depth': 40}
 2021-07-25 14:56:15,701 save models in ../models/rfc_model.pkl, store results in ../results/images/
 2021-07-25 14:56:15,972 precision: 0.7848244620611552, recall: 0.5892857142857143, f1: 0.6731423020883924
+2021-07-25 15:27:56,120 ############################################################
+2021-07-25 15:27:56,120 import data
+2021-07-25 15:27:56,196 inspect dataframe:     
+age                          39
+workclass             State-gov
+fnlgt                     77516
+education             Bachelors
+education-num                13
+marital-status    Never-married
+occupation         Adm-clerical
+relationship      Not-in-family
+race                      White
+sex                        Male
+capital-gain               2174
+capital-loss                  0
+hours-per-week               40
+native-country    United-States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 15:27:56,196 generate EDA report: ../results/eda/eda.html
+2021-07-25 15:28:18,382 normalize numeric features: ['age', 'fnlgt', 'education-num', 'capital-gain', 'capital-loss', 'hours-per-week']
+2021-07-25 15:28:18,424 inspect dataframe:     
+age                    0.030671
+workclass             State-gov
+fnlgt                 -1.063611
+education             Bachelors
+education-num          1.134739
+marital-status    Never-married
+occupation         Adm-clerical
+relationship      Not-in-family
+race                      White
+sex                        Male
+capital-gain           0.148453
+capital-loss           -0.21666
+hours-per-week        -0.035429
+native-country    United-States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 15:28:18,424 one-hot-encode categorical features:['workclass', 'education', 'marital-status', 'occupation', 'relationship', 'race', 'sex', 'native-country', 'salary']
+2021-07-25 15:28:18,459 inspect dataframe:     
+age                               0.030671
+fnlgt                            -1.063611
+education-num                     1.134739
+capital-gain                      0.148453
+capital-loss                     -0.216660
+                                    ...   
+native-country_Trinadad&Tobago    0.000000
+native-country_United-States      1.000000
+native-country_Vietnam            0.000000
+native-country_Yugoslavia         0.000000
+salary_>50K                       0.000000
+Name: 0, Length: 101, dtype: float64
+2021-07-25 15:28:19,212 perform train test split with the test size of 0.3
+2021-07-25 15:28:19,255 start training
+2021-07-25 15:32:08,137 best parameters are: {'n_estimators': 500, 'min_samples_split': 10, 'min_samples_leaf': 2, 'max_depth': 50}
+2021-07-25 15:32:08,137 save models in ../models/rfc_model.pkl, store results in ../results/images/
+2021-07-25 15:32:08,906 precision: 0.7799121844127332, recall: 0.6041666666666666, f1: 0.6808816482989937
+2021-07-25 16:01:45,995 ############################################################
+2021-07-25 16:01:45,995 import data
+2021-07-25 16:01:46,100 inspect dataframe:     
+age                          39
+workclass             State-gov
+fnlgt                     77516
+education             Bachelors
+education_num                13
+marital_status    Never-married
+occupation         Adm-clerical
+relationship      Not-in-family
+race                      White
+sex                        Male
+capital_gain               2174
+capital_loss                  0
+hours_per_week               40
+native_country    United-States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:01:46,100 generate EDA report: ../results/eda/eda.html
+2021-07-25 16:02:04,665 normalize numeric features: ['age', 'fnlgt', 'education-num', 'capital-gain', 'capital-loss', 'hours-per-week']
+2021-07-25 16:02:59,628 ############################################################
+2021-07-25 16:02:59,628 import data
+2021-07-25 16:02:59,724 inspect dataframe:     
+age                          39
+workclass             State-gov
+fnlgt                     77516
+education             Bachelors
+education_num                13
+marital_status    Never-married
+occupation         Adm-clerical
+relationship      Not-in-family
+race                      White
+sex                        Male
+capital_gain               2174
+capital_loss                  0
+hours_per_week               40
+native_country    United-States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:02:59,724 generate EDA report: ../results/eda/eda.html
+2021-07-25 16:03:18,721 normalize numeric features: ['age', 'fnlgt', 'education_num', 'capital_gain', 'capital_loss', 'hours_per_week']
+2021-07-25 16:03:18,767 inspect dataframe:     
+age                    0.030671
+workclass             State-gov
+fnlgt                 -1.063611
+education             Bachelors
+education_num          1.134739
+marital_status    Never-married
+occupation         Adm-clerical
+relationship      Not-in-family
+race                      White
+sex                        Male
+capital_gain           0.148453
+capital_loss           -0.21666
+hours_per_week        -0.035429
+native_country    United-States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:03:18,767 one-hot-encode categorical features:['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country', 'salary']
+2021-07-25 16:03:18,800 inspect dataframe:     
+age                               0.030671
+fnlgt                            -1.063611
+education_num                     1.134739
+capital_gain                      0.148453
+capital_loss                     -0.216660
+                                    ...   
+native_country_Trinadad&Tobago    0.000000
+native_country_United-States      1.000000
+native_country_Vietnam            0.000000
+native_country_Yugoslavia         0.000000
+salary_>50K                       0.000000
+Name: 0, Length: 101, dtype: float64
+2021-07-25 16:03:19,518 perform train test split with the test size of 0.3
+2021-07-25 16:03:19,561 start training
+2021-07-25 16:03:46,526 best parameters are: {'n_estimators': 400, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_depth': 50}
+2021-07-25 16:03:46,527 save models in ../models/rfc_model.pkl, store results in ../results/images/
+2021-07-25 16:03:47,065 precision: 0.7828539199097575, recall: 0.5901360544217688, f1: 0.672969696969697
+2021-07-25 16:06:23,598 ############################################################
+2021-07-25 16:06:23,599 import data
+2021-07-25 16:06:23,662 inspect dataframe:     
+age                          39
+workclass             State_gov
+fnlgt                     77516
+education             Bachelors
+education_num                13
+marital_status    Never_married
+occupation         Adm_clerical
+relationship      Not_in_family
+race                      White
+sex                        Male
+capital_gain               2174
+capital_loss                  0
+hours_per_week               40
+native_country    United_States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:06:23,662 generate EDA report: ../results/eda/eda.html
+2021-07-25 16:06:41,580 normalize numeric features: ['age', 'fnlgt', 'education_num', 'capital_gain', 'capital_loss', 'hours_per_week']
+2021-07-25 16:06:41,628 inspect dataframe:     
+age                    0.030671
+workclass             State_gov
+fnlgt                 -1.063611
+education             Bachelors
+education_num          1.134739
+marital_status    Never_married
+occupation         Adm_clerical
+relationship      Not_in_family
+race                      White
+sex                        Male
+capital_gain           0.148453
+capital_loss           -0.21666
+hours_per_week        -0.035429
+native_country    United_States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:06:41,628 one-hot-encode categorical features:['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country', 'salary']
+2021-07-25 16:06:41,659 inspect dataframe:     
+age                               0.030671
+fnlgt                            -1.063611
+education_num                     1.134739
+capital_gain                      0.148453
+capital_loss                     -0.216660
+                                    ...   
+native_country_Trinadad&Tobago    0.000000
+native_country_United_States      1.000000
+native_country_Vietnam            0.000000
+native_country_Yugoslavia         0.000000
+salary_>50K                       0.000000
+Name: 0, Length: 101, dtype: float64
+2021-07-25 16:06:42,363 perform train test split with the test size of 0.3
+2021-07-25 16:06:42,399 start training
+2021-07-25 16:07:04,796 best parameters are: {'n_estimators': 400, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_depth': 50}
+2021-07-25 16:07:04,796 save models in ../models/rfc_model.pkl, store results in ../results/images/
+2021-07-25 16:07:05,288 precision: 0.7819718309859155, recall: 0.5901360544217688, f1: 0.6726435667555125
+2021-07-25 16:12:13,136 ############################################################
+2021-07-25 16:12:13,137 import data
+2021-07-25 16:12:13,226 inspect dataframe:     
+age                          39
+workclass             State_gov
+fnlgt                     77516
+education             Bachelors
+education_num                13
+marital_status    Never_married
+occupation         Adm_clerical
+relationship      Not_in_family
+race                      White
+sex                        Male
+capital_gain               2174
+capital_loss                  0
+hours_per_week               40
+native_country    United_States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:12:13,226 generate EDA report: ../results/eda/eda.html
+2021-07-25 16:12:32,777 normalize numeric features: ['age', 'fnlgt', 'education_num', 'capital_gain', 'capital_loss', 'hours_per_week']
+2021-07-25 16:12:32,822 inspect dataframe:     
+age                    0.030671
+workclass             State_gov
+fnlgt                 -1.063611
+education             Bachelors
+education_num          1.134739
+marital_status    Never_married
+occupation         Adm_clerical
+relationship      Not_in_family
+race                      White
+sex                        Male
+capital_gain           0.148453
+capital_loss           -0.21666
+hours_per_week        -0.035429
+native_country    United_States
+salary                    <=50K
+Name: 0, dtype: object
+2021-07-25 16:12:32,822 one-hot-encode categorical features:['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country', 'salary']
+2021-07-25 16:12:32,856 inspect dataframe:     
+age                               0.030671
+fnlgt                            -1.063611
+education_num                     1.134739
+capital_gain                      0.148453
+capital_loss                     -0.216660
+                                    ...   
+native_country_Trinadad_Tobago    0.000000
+native_country_United_States      1.000000
+native_country_Vietnam            0.000000
+native_country_Yugoslavia         0.000000
+salary_>50K                       0.000000
+Name: 0, Length: 101, dtype: float64
+2021-07-25 16:12:33,564 perform train test split with the test size of 0.3
+2021-07-25 16:12:33,602 start training
+2021-07-25 16:12:58,273 best parameters are: {'n_estimators': 400, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_depth': 50}
+2021-07-25 16:12:58,273 save models in ../models/rfc_model.pkl, store results in ../results/images/
+2021-07-25 16:12:58,775 precision: 0.780829596412556, recall: 0.5922619047619048, f1: 0.6735976789168279
