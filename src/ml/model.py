@@ -1,56 +1,14 @@
-# from sklearn.metrics import fbeta_score, precision_score, recall_score
-# from sklearn.ensemble import RandomForestClassifier
-# from sklearn.model_selection import RandomizedSearchCV
-# import numpy as np
-
-# # Optional: implement hyperparameter tuning.
-# def train_model(X_train, y_train):
-#     """
-#     Trains a machine learning model and returns it.
-
-#     Inputs
-#     ------
-#     X_train : np.array
-#         Training data.
-#     y_train : np.array
-#         Labels.
-#     Returns
-#     -------
-#     model
-#         Trained machine learning model.
-#     """
-
-#     # Number of trees in random forest
-#     n_estimators = [int(x) for x in np.linspace(start = 100, stop = 500, num = 5)]
-#     # Maximum number of levels in tree
-#     max_depth = [int(x) for x in np.linspace(2, 100, num = 5)]
-#     # Minimum number of samples required to split a node
-#     min_samples_split = [2, 5, 10]
-#     # Minimum number of samples required at each leaf node
-#     min_samples_leaf = [1, 2, 4]
-
-#     # Create the random grid
-#     random_grid = {'n_estimators': n_estimators,
-#                 'max_depth': max_depth,
-#                 'min_samples_split': min_samples_split,
-#                 'min_samples_leaf': min_samples_leaf}
-#     # Use the random grid to search for best hyperparameters
-#     # First create the base model to tune
-#     rf = RandomForestClassifier()
-#     # Random search of parameters, using 3 fold cross validation,
-#     # search across 10 different combinations, and use all available cores
-#     rf_random = RandomizedSearchCV(estimator = rf, param_distributions = random_grid, n_iter = 2, cv = 3, verbose=2, random_state=42, n_jobs = -1)
-#     # Fit the random search model
-#     rf_random.fit(X_train, y_train)
-# #     return rf_random.best_estimator_
-
 import joblib
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, fbeta_score, precision_score, recall_score
-
+from sklearn.metrics import (
+    classification_report,
+    fbeta_score,
+    precision_score,
+    recall_score,
+)
 
 
 def classification_report_image(
@@ -134,25 +92,35 @@ def train_models(
               best_model
     """
     # Number of trees in random forest
-    n_estimators = [int(x) for x in np.linspace(start = 100, stop = 300, num = 5)]
+    n_estimators = [int(x) for x in np.linspace(start=100, stop=500, num=5)]
     # Maximum number of levels in tree
-    max_depth = [int(x) for x in np.linspace(2, 40, num = 5)]
+    max_depth = [int(x) for x in np.linspace(2, 50, num=5)]
     # Minimum number of samples required to split a node
     min_samples_split = [5, 10, 15, 20]
     # Minimum number of samples required at each leaf node
     min_samples_leaf = [2, 4, 8, 16]
 
     # Create the random grid
-    random_grid = {'n_estimators': n_estimators,
-                'max_depth': max_depth,
-                'min_samples_split': min_samples_split,
-                'min_samples_leaf': min_samples_leaf}
+    random_grid = {
+        "n_estimators": n_estimators,
+        "max_depth": max_depth,
+        "min_samples_split": min_samples_split,
+        "min_samples_leaf": min_samples_leaf,
+    }
     # Use the random grid to search for best hyperparameters
     # First create the base model to tune
     rf = RandomForestClassifier()
     # Random search of parameters, using 3 fold cross validation,
     # search across 10 different combinations, and use all available cores
-    rf_random = RandomizedSearchCV(estimator = rf, param_distributions = random_grid, n_iter = 50, cv = 3, verbose=2, random_state=42, n_jobs = -1)
+    rf_random = RandomizedSearchCV(
+        estimator=rf,
+        param_distributions=random_grid,
+        n_iter=2,
+        cv=3,
+        verbose=2,
+        random_state=42,
+        n_jobs=-1,
+    )
     # Fit the random search model
     rf_random.fit(X_train, y_train)
 
@@ -171,9 +139,10 @@ def train_models(
 
     return best_model, best_params
 
+
 def compute_model_metrics(y, preds):
     """
-    Validates the trained machine learning model using precision, recall, and F1.
+    Validates the trained model using precision, recall, and F1.
 
     Inputs
     ------
@@ -194,7 +163,7 @@ def compute_model_metrics(y, preds):
 
 
 def inference(model, X):
-    """ Run model inferences and return the predictions.
+    """Run model inferences and return the predictions.
 
     Inputs
     ------
