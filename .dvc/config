@@ -1,0 +1,7 @@
+[core]
+    remote = s3remote
+['remote "s3remote"']
+    url = s3://20210723mlops
+    profile = hui
+    credentialpath = /Users/huiren/.aws/credentials
+    region = us-west-2
