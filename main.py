@@ -5,6 +5,7 @@ import logging
 import pandas as pd
 import os
 
+# give Heroku the ability to pull in data from DVC upon app start up
 if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("dvc config core.no_scm true")
     if os.system("dvc pull") != 0:
