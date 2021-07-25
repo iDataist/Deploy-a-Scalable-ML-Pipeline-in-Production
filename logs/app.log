@@ -103,3 +103,10 @@
 2021-07-25 17:55:13,659 Started server process [56576]
 2021-07-25 17:55:13,659 Waiting for application startup.
 2021-07-25 17:55:13,660 Application startup complete.
+2021-07-25 18:05:25,029 Shutting down
+2021-07-25 18:05:25,143 Waiting for application shutdown.
+2021-07-25 18:05:25,144 Application shutdown complete.
+2021-07-25 18:05:25,144 Finished server process [56576]
+2021-07-25 18:05:27,739 Started server process [56902]
+2021-07-25 18:05:27,740 Waiting for application startup.
+2021-07-25 18:05:27,740 Application startup complete.
