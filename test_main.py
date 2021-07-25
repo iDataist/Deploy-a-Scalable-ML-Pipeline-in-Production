@@ -221,4 +221,4 @@ def test_post_malformed():
         "native_country_Yugoslavia": 0.0,
     }
     response = client.post("/predict", json=payload)
-    assert response.status_code != 200
+    assert response.status_code == 422
