@@ -3,6 +3,7 @@ import pandas_profiling
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
+
 def import_data(path):
     """
     returns dataframe for the csv found at path
