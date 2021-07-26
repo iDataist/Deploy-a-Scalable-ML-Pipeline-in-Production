@@ -312,3 +312,11 @@ Name: 0, Length: 101, dtype: float64
 2021-07-25 19:11:35,869 Testing encoder: SUCCESS
 2021-07-25 19:11:35,907 Testing perform_train_test_split: SUCCESS
 2021-07-25 19:12:00,859 Testing train_models: SUCCESS
+2021-07-25 19:37:22,733 ############################################################
+2021-07-25 19:37:22,738 start tests
+2021-07-25 19:37:23,663 Testing import_data: SUCCESS
+2021-07-25 19:37:45,592 Testing perform_eda: SUCCESS
+2021-07-25 19:37:45,651 Testing scaler: SUCCESS
+2021-07-25 19:37:45,689 Testing encoder: SUCCESS
+2021-07-25 19:37:45,735 Testing perform_train_test_split: SUCCESS
+2021-07-25 19:38:13,828 Testing train_models: SUCCESS
