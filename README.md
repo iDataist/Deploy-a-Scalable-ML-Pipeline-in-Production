@@ -1,7 +1,7 @@
 # Deploying a Scalable ML Pipeline in Production
 
 ## Overview
-I developed a CI/CD pipeline to predict salary range based on publicly available Census Bureau data. I created unit tests to monitor the model performance on various slices of the data. Then, I deployed the model using the FastAPI package and create API tests. Both the slice-validation and the API tests were incorporated into the CI/CD framework using GitHub Actions.
+I developed a CI/CD pipeline to predict salary range based on publicly available Census Bureau data. I created tests to monitor the machine learning pipeline. Then, I deployed the model using the FastAPI package and create API tests. The tests were incorporated into the CI/CD framework using GitHub Actions.
 
 ## Dependencies
 * Download and install conda if you don’t have it already.
