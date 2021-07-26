@@ -117,3 +117,24 @@
 2021-07-25 18:38:58,313 Started server process [57799]
 2021-07-25 18:38:58,313 Waiting for application startup.
 2021-07-25 18:38:58,314 Application startup complete.
+2021-07-25 19:08:37,249 Shutting down
+2021-07-25 19:08:37,355 Waiting for application shutdown.
+2021-07-25 19:08:37,357 Application shutdown complete.
+2021-07-25 19:08:37,357 Finished server process [57799]
+2021-07-25 19:08:40,207 Started server process [58801]
+2021-07-25 19:08:40,207 Waiting for application startup.
+2021-07-25 19:08:40,208 Application startup complete.
+2021-07-25 19:09:32,441 Shutting down
+2021-07-25 19:09:32,544 Waiting for application shutdown.
+2021-07-25 19:09:32,544 Application shutdown complete.
+2021-07-25 19:09:32,544 Finished server process [58801]
+2021-07-25 19:09:35,152 Started server process [58829]
+2021-07-25 19:09:35,152 Waiting for application startup.
+2021-07-25 19:09:35,153 Application startup complete.
+2021-07-25 19:11:00,921 Shutting down
+2021-07-25 19:11:01,023 Waiting for application shutdown.
+2021-07-25 19:11:01,023 Application shutdown complete.
+2021-07-25 19:11:01,023 Finished server process [58829]
+2021-07-25 19:11:02,001 Started server process [58907]
+2021-07-25 19:11:02,002 Waiting for application startup.
+2021-07-25 19:11:02,002 Application startup complete.
