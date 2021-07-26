@@ -46,6 +46,7 @@ jobs:
         run: |
           cd src
           pytest
+        working-directory: /src
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
