@@ -1,9 +1,9 @@
-data_path = "../data/census.csv"
-processed_data_path = "../data/processed_data.csv"
-eda_output_path = "../results/eda/eda.html"
-image_output_path = "../results/images/"
-model_output_path = "../models/rfc_model.pkl"
-log_path = "../logs/train_model.log"
+data_path = "data/census.csv"
+processed_data_path = "data/processed_data.csv"
+eda_output_path = "results/eda/eda.html"
+image_output_path = "results/images/"
+model_output_path = "models/rfc_model.pkl"
+log_path = "logs/train_model.log"
 cat_columns = [
     "workclass",
     "education",
