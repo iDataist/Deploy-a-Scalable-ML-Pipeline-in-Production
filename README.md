@@ -28,7 +28,6 @@ I developed a CI/CD pipeline to predict salary range based on publicly available
         * Configure your AWS CLI to use the Access key ID and Secret Access key.
 
 * GitHub Actions
-    * Setup GitHub Actions on your repository. You can use one of the pre-made GitHub Actions if at a minimum it runs pytest and flake8 on push and requires both to pass without error.
     * Make sure you set up the GitHub Action to have the same version of Python as you used in development.
     * Add your <a href="https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions" target="_blank">AWS credentials to the Action</a>.
     * Set up <a href="https://github.com/iterative/setup-dvc" target="_blank">DVC in the action</a> and specify a command to `dvc pull`.
