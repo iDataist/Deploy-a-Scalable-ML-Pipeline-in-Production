@@ -45,6 +45,7 @@ jobs:
       - name: Test with pytest
         run: |
           pytest src/test_train_model.py
+        work-directory: ./
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
